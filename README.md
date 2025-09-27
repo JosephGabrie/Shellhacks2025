@@ -16,3 +16,8 @@
 
 ## Contracts folder
 See `contracts/*.json` for Pub/Sub payload shapes.
+
+Prompt precedence:
+1) If payload.promptMode == "custom" and customPrompt present → use customPrompt.
+2) Else if templateId provided → load prompts/registry.json and fill templateParams.
+3) Else ("default") → use built-in monthly summary template.
