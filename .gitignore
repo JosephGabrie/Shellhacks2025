@@ -1,6 +1,3 @@
-#Ignore everything
-*.*
-#Except go and python files.
-!go.sum
-!*.go
-!*.python
+.json
+.env
+venv/
