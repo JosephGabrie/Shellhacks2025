@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up with Google</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div class="floating-shapes"></div>
+
+  <div class="container">
+    <h1>Sign Up</h1>
+
+    <!-- Google Sign-In Button -->
+    <div id="g_id_onload"
+         data-client_id="953916625395-55ippuu7l5cglcoo64cab4hk8mmsm0v9.apps.googleusercontent.com"
+         data-context="signin"
+         data-ux_mode="popup"
+         data-callback="handleCredentialResponse"
+         data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-shape="rectangular"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-size="large"
+         data-logo_alignment="left">
+    </div>
+  </div>
+
+  <script>
+    function handleCredentialResponse(response) {
+      const jwt = response.credential;
+      // Decode JWT (or send to backend for verification)
+      const payload = JSON.parse(atob(jwt.split('.')[1]));
+      console.log('User info:', payload);
+
+      // You can now store or use payload.name, payload.email, etc.
+      alert(`Welcome, ${payload.name}! Redirecting to reminder page...`);
+
+      // Optional: Save user info in session/localStorage
+      localStorage.setItem('user', JSON.stringify(payload));
+
+      // Redirect to reminder page
+      window.location.href = 'message.html';
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

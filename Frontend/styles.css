@@ -1,0 +1,251 @@
+/* Reset some default styles */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: orange;
+  overflow: hidden; /* Prevents scrolling */
+  position: relative;
+}
+
+/* Floating shapes */
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Puts the shapes behind the content */
+}
+
+.shape {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  opacity: 0.3;
+  animation: float 10s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(100vw), calc(100vh));
+  }
+}
+
+/* Form container */
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-input:focus {
+  border-color: orange;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: darkorange;
+}
+
+.submit-btn:active {
+  background-color: #e65c00;
+}
+
+
+
+/* Dropdown container at top-right */
+.dropdown-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hidden dropdown by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 180px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+}
+
+.dropdown-menu .icon {
+  flex-shrink: 0;
+}
+/* Container Alignment */
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* History Header (Label + Clear Button) */
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* History Label Button */
+.history-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Clear History Button */
+.clear-history-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Scrollable History Box */
+.history-box {
+  max-height: 300px;
+  width: 100%;
+  max-width: 600px;
+  overflow-y: auto;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* List Styling */
+.history-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

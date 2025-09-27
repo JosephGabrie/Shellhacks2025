@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Set a Reminder</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-column {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- User Info Display -->
+  <div class="container" id="user-info" style="text-align: center; margin-top: 20px;"></div>
+
+  <!-- Dropdown -->
+  <div class="dropdown-container">
+    <div class="hamburger" id="hamburger-menu">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu">
+      <a href="#">Connect Bank Account</a>
+      <a href="#">Connect Email</a>
+    </div>
+  </div>
+
+  <div class="floating-shapes"></div>
+
+  <!-- Reminder Form -->
+  <div class="container">
+    <h1>Set a Reminder</h1>
+    <form action="#" method="post" id="message-form">
+      <div class="form-row">
+        <!-- Message Box -->
+        <div class="form-column">
+          <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" class="form-input" rows="5" required></textarea>
+          </div>
+        </div>
+
+        <!-- Calendar & Time Picker -->
+        <div class="form-column">
+          <div class="form-group">
+            <label for="reminder-date">Select Date:</label>
+            <input type="date" id="reminder-date" name="reminder-date" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="reminder-time">Select Time:</label>
+            <input type="time" id="reminder-time" name="reminder-time" class="form-input" step="3600" required>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Reminder</button>
+    </form>
+  </div>
+
+  <!-- History Section -->
+  <div class="container history-container">
+    <div class="history-header">
+      <button id="history-label" class="history-button" disabled>History</button>
+      <button id="clear-history" class="clear-history-button">Clear History</button>
+    </div>
+
+    <div class="history-box">
+      <ul id="conversation-history" class="history-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Custom JS for user handling -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const userInfoDiv = document.getElementById("user-info");
+      const user = JSON.parse(localStorage.getItem("user"));
+
+      if (user && user.name) {
+        userInfoDiv.innerHTML = `
+          <h2>Welcome, ${user.name}!</h2>
+          <p>Email: ${user.email}</p>
+          <button onclick="logout()" style="margin-top: 10px; background: #dc3545; color: white; padding: 8px 16px; border: none; border-radius: 5px;">Sign Out</button>
+        `;
+      } else {
+        userInfoDiv.innerHTML = `
+          <h2>Welcome!</h2>
+          <p><a href="index.html">Please sign in with Google first</a></p>
+        `;
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 3000);
+      }
+    });
+
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
