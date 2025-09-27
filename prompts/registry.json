@@ -1,0 +1,4 @@
+{
+  "RECURRING_CHARGES": "You are a finance analyst. Using the DATA below and the WINDOW, identify recurring merchants whose average charge >= {{minAmount}} over the last {{days}} days. Return JSON fields: findings.recurring[], findings.totals, summary, sms (<=160 chars).",
+  "CATEGORY_BREAKDOWN": "Analyze spend by category in the last {{days}} days. Return totals by category, top categories, and a short summary + sms (<=160 chars)."
+}
