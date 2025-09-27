@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "data": {
+    "findings": { "totals": {}, "byMerchant": [], "byCategory": [], "recurring": [], "anomalies": [] },
+    "summary": "…",
+    "sms": "…"
+  },
+  "error": null,
+  "traceId": "abc-123"
+}
