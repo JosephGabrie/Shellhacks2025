@@ -1,0 +1,17 @@
+@'
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+'@ | Out-File -Encoding utf8 .gitignore
