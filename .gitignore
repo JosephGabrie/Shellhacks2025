@@ -1,17 +1,6 @@
-@'
-# Python
-__pycache__/
-*.pyc
-.venv/
-
-# VS Code
-.vscode/
-*.code-workspace
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Env
-.env
-'@ | Out-File -Encoding utf8 .gitignore
+#Ignore everything
+*.*
+#Except go and python files.
+!go.sum
+!*.go
+!*.python
