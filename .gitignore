@@ -1,4 +1,4 @@
 .json
 .env
 venv/
-token.json
+src/agent_folder/gmail_agent/token.json
