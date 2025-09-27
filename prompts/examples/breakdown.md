@@ -1,0 +1,1 @@
+Break down spend by category for the last 14 days; list top 5 categories and totals.
