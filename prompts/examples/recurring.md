@@ -1,0 +1,1 @@
+Identify subscriptions over $10 in the last 30 days; group by merchant, show occurrences and total.
