@@ -2,3 +2,4 @@
 .env
 venv/
 src/agent_folder/gmail_agent/token.json
+src/common/credentials.json
