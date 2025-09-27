@@ -2,8 +2,10 @@ import os.path
 import base64 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from google.adk.agents import Agent
+from google_auth_oauthlib.flow import InstalledAppFlow
+
 
 def get_latest_gmail(query: str = "-category:{promotions social}") -> str:
     """Fetches the sender, subject, and body of the most recent email in a user's Gmail inbox.
@@ -70,7 +72,7 @@ def get_latest_gmail(query: str = "-category:{promotions social}") -> str:
     except Exception as e:
         return f"An error occurred while fetching emails: {e}"
 
-gmail_agent = Agent(
+root_agent = Agent(
     name="gmail_agent",
     model="gemini-2.0-flash",  # Use a valid model name
     description="An agent that can fetch the user's most recent email.",
