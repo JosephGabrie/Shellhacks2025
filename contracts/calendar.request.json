@@ -1,0 +1,13 @@
+{
+  "task": "EVENT_REQUEST",
+  "payload": {
+    "title": "Move laundry",
+    "notes": "From user chat",
+    "start": { "dateTime": "2025-09-27T16:30:00-04:00" },
+    "end":   { "dateTime": "2025-09-27T17:00:00-04:00" },
+    "reminders": { "minutesBefore": 10 },
+    "provider": "google"
+  },
+  "user": { "id": "u123", "tz": "America/New_York" },
+  "traceId": "abc-123"
+}

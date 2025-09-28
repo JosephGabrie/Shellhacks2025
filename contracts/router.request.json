@@ -1,0 +1,6 @@
+{
+  "task":"USER_MESSAGE",
+  "payload":{"text":"what is 3+3"},
+  "user":{"id":"u123","tz":"America/New_York"},
+  "traceId":"t-general-1"
+}

@@ -1,0 +1,18 @@
+{
+  "task": "EMAIL_QUERY",
+  "payload": {
+    "filters": {
+      "from": null,
+      "subjectContains": null,
+      "unreadOnly": true,
+      "since": "2025-09-20",
+      "until": "2025-09-27",
+      "maxResults": 10
+    },
+    "action": "LIST",
+    "includeBody": false,
+    "summarize": true
+  },
+  "user": { "id": "u123", "emailProvider": "gmail" },
+  "traceId": "abc-123"
+}

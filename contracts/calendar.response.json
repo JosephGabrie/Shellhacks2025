@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "data": {
+    "eventId": "evt_123",
+    "htmlLink": "https://calendar.google.com/event?eid=evt_123",
+    "when": { "start": "2025-09-27T16:30:00-04:00", "end": "2025-09-27T17:00:00-04:00" }
+  },
+  "error": null,
+  "traceId": "abc-123"
+}

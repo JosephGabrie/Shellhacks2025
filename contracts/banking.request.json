@@ -1,14 +1,25 @@
 {
   "task": "BANKING_QUERY",
   "payload": {
-    "json": { "transactions": [] },
+    "json": {
+      "transactions": []
+    },
     "fileRef": null,
     "promptMode": "template",
     "templateId": "RECURRING_CHARGES",
-    "templateParams": { "minAmount": 10, "days": 30 },
+    "templateParams": {
+      "minAmount": 10,
+      "days": 30
+    },
     "customPrompt": null,
-    "window": { "since": "2025-08-26", "until": "2025-09-26" }
+    "window": {
+      "since": "2025-08-26",
+      "until": "2025-09-26"
+    }
   },
-  "user": { "id": "u123", "tz": "America/New_York" },
+  "user": {
+    "id": "u123",
+    "tz": "America/New_York"
+  },
   "traceId": "abc-123"
 }

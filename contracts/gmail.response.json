@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "data": {
+    "emails": [
+      {
+        "id": "174829371",
+        "from": "HR <hr@company.com>",
+        "subject": "Offer details",
+        "snippet": "We are pleased to ...",
+        "date": "2025-09-26T14:03:00Z",
+        "unread": true,
+        "threadId": "thread_123",
+        "url": "https://mail.google.com/mail/u/0/#inbox/174829371"
+      }
+    ],
+    "summary": "You have 1 unread email mentioning 'offer'.",
+    "sms": "1 unread email about 'offer'. Reply OPEN for summary."
+  },
+  "error": null,
+  "traceId": "abc-123"
+}

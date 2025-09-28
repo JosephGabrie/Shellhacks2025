@@ -1,0 +1,9 @@
+{
+  "status": "error",
+  "data": null,                     
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "Missing transactions array"
+  },
+  "traceId": "abc-123"
+}

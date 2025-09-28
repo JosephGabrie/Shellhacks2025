@@ -1,0 +1,11 @@
+{
+  "status": "ok",
+  "data": {
+    "classification": "calendar",
+    "confidence": 0.92,
+    "nextAction": null,
+    "answer": "Got it. I’ll add it to your calendar and text you 10 minutes before."
+  },
+  "error": null,
+  "traceId": "abc-123"
+}
