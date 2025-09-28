@@ -6,8 +6,10 @@ from googleapiclient.discovery import build
 from google.adk.agents import Agent
 from google_auth_oauthlib.flow import InstalledAppFlow
 from pathlib import Path  # <-- Make sure to import Path
+from dotenv import load_dotenv
+load_dotenv()
 
-
+print(os.getenv("GOOGLE_API_KEY"))
 
 def get_latest_gmail(query: str = "-category:{promotions social}") -> str:
     """Fetches the sender, subject, and body of the most recent email in a user's Gmail inbox.
