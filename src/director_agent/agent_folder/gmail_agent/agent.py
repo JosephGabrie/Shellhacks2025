@@ -75,7 +75,7 @@ def get_latest_gmail(query: str = "-category:{promotions social}") -> str:
     except Exception as e:
         return f"An error occurred while fetching emails: {e}"
 
-root_agent = Agent(
+gmail_agent = Agent(
     name="gmail_agent",
     model="gemini-2.0-flash",  # Use a valid model name
     description="An agent that can fetch the user's most recent email.",

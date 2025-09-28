@@ -1,12 +1,12 @@
 from google.adk.agents import Agent
 
 from .agent_folder.gmail_agent.agent import gmail_agent
-from .agent_folder.calandar_agent.agent import calandar_agent
+from .agent_folder.calendar_agent.agent import calendar_agent # <-- Corrected
 from .agent_folder.banking_agent.agent import banking_agent
 from .agent_folder.greeting_agent.agent import greeting_agent
 
 # Create the root customer service agent
-customer_service_agent = Agent(
+notification_service_agent = Agent(
     name="notification_service",
     model="gemini-2.0-flash",
     description="Customer service agent for AI Developer Accelerator community",
@@ -75,6 +75,6 @@ customer_service_agent = Agent(
     Always maintain a helpful and professional tone. If you're unsure which agent to delegate to,
     ask clarifying questions to better understand the user's needs.
     """,
-    sub_agents=[gmail_agent, calandar_agent, banking_agent, greeting_agent],
+    sub_agents=[gmail_agent, calendar_agent, banking_agent, greeting_agent],
     tools=[],
 )

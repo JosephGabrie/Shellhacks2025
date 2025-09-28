@@ -297,7 +297,7 @@ if __name__ == "__main__":
     add_reminder = FunctionTool(func=add_reminder)
     freebusy = FunctionTool(func=freebusy)
 
-root_agent = Agent(
+calendar_agent = Agent(
     model="gemini-2.0-flash",
     name="calendar_agent",
     instruction=(

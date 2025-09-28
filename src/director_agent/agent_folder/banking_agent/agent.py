@@ -158,7 +158,7 @@ def bank_window_summary(
 BankSummaryTool = FunctionTool(bank_window_summary)
 
 # ---------- Agent ----------
-root_agent = Agent(
+banking_agent = Agent(
     name="banking_agent",
     model="gemini-2.0-flash",
     description="Banking agent: summarizes spending from a JSON dataset.",

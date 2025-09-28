@@ -30,7 +30,7 @@ async def main_async():
 
     # ===== PART 3: Session Creation =====
     # Create a new session with initial state
-    new_session = session_service.create_session(
+    new_session = await session_service.create_session(
         app_name=APP_NAME,
         user_id=USER_ID,
         state=initial_state,
