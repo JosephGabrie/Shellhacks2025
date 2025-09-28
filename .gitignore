@@ -1,6 +1,7 @@
-#Ignore everything
-*.*
-#Except go and python files.
-!go.sum
-!*.go
-!*.python
+.json
+.env
+venv/
+src/agent_folder/gmail_agent/token.json
+src/common/credentials.json
+src/common/token.json
+src/common/token.json
