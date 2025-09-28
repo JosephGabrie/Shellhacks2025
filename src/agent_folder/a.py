@@ -1,3 +1,4 @@
+
 import os.path
 import base64
 from pathlib import Path  # <-- Make sure to import Path
@@ -6,8 +7,6 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-
-# All the other necessary imports should be here too...
 
 def _get_gmail_service():
     """Handles OAuth credentials and returns an authenticated Gmail API service object."""
@@ -37,8 +36,6 @@ def _get_gmail_service():
         # Save the credentials for the next run
         with open(token_path, "w") as token:
             token.write(creds.to_json())
-
     # 4. Build and return the Gmail service object
     return build("gmail", "v1", credentials=creds)
 
-_get_gmail_service()
